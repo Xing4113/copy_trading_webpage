@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
+/* Load Font */
+@font-face {
+  font-family: "ATRotisSemiSans";
+  src: url("/fonts/ATRotisSemiSans.ttf") format("truetype"); /* Fallback */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* CSS Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #3A53BA;
+  
+  /* Title and Body Text Colors */
+  --dark-blue: #040dbf;
+  --light-blue: #01f2f2;
+  --gold: #f2df79;
+  --orange: #F37406;
+
+  /* Use the same font family with different weights */
+  --font-main-title: "ATRotisSemiSans", sans-serif;
+  --font-subtitle: "ATRotisSemiSans", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Apply Global Styles */
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-family: var(--font-subtitle);
+}
+
+/* Title Styles */
+.main-title {
+  font-family: var(--font-main-title);
+  font-weight: 800; /* Extra Bold */
+}
+
+.subtitle {
+  font-family: var(--font-subtitle);
+  font-weight: 300; /* Light */
 }
