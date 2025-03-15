@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "../ui/Button";
 import Timer from "../ui/Timer";
 import { SvgIcon } from "@mui/material";
@@ -8,7 +9,7 @@ const Header = () => {
     <div className="w-full flex items-center justify-between px-[136px]" style={{ backgroundColor: "var(--header-color)" }}>
     
     {/* Left Section */}
-    <img src="/images/logo.png" className="w-[168px] p-3" />
+    <Image src="/images/logo.png" width={168} height={80} alt="Logo" className="p-3" />
     
     {/* Center Section */}
     <Timer targetDate="2025-04-16T23:59:59" customStyle="ml-[-120px]"/>
