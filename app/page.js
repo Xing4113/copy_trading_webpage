@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Header from "@/src/components/layout/Header";
 
 export default function Home() {
   return (
-    <div className="main-title">
-      COPY TRADING
+    <div>
+      <Header />
     </div>
   );
 }
