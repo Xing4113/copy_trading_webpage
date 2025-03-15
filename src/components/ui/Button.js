@@ -4,6 +4,7 @@ export default function Button({
   title,
   titleStyle,
   buttonStyle,
+  otherStyle = {},
   isLoading = false,
   disabled = false,
   onClick,
@@ -14,6 +15,7 @@ export default function Button({
       className={`${buttonStyle}`}
       onClick={onClick}
       disabled={disabled || isLoading}
+      style={otherStyle}
     >
       <span className={`${titleStyle}`}> { title }</span>  
       
