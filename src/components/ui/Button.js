@@ -12,7 +12,7 @@ export default function Button({
 
   return (
     <button
-      className={`${buttonStyle}`}
+      className={`${buttonStyle} flex justify-center items-center shadow-md hover:from-orange-500 hover:to-orange-700 active:scale-95 transition-all cursor-pointer`}
       onClick={onClick}
       disabled={disabled || isLoading}
       style={otherStyle}

@@ -18,7 +18,7 @@ const Header = () => {
 
     <div className="flex items-center justify-between gap-1.5">
     
-      <Button title="REGISTER NOW" titleStyle="text-sm" buttonStyle="px-6 py-2 bg-gradient-to-b from-orange-400 to-orange-600 rounded-full shadow-md hover:from-orange-500 hover:to-orange-700 active:scale-95 transition-all"/>
+      <Button title="REGISTER NOW" titleStyle="text-xs" buttonStyle="px-4 py-2.5 bg-gradient-to-b from-orange-400 to-orange-500 rounded-full"/>
 
       <SvgIcon component={Person} sx={{ fontSize: '24px', color: "gray", color: "gray"}}/>
     </div>
