@@ -51,7 +51,7 @@ export default function HeroSection() {
                     width={160} 
                     height={160} 
                     alt="Regular"
-                    className="absolute -right-0 -bottom-0 z-0"
+                    className="absolute -right-2 -bottom-0 z-0"
                 />
 
             </div>
