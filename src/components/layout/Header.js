@@ -1,6 +1,7 @@
 import Button from "../ui/Button";
 import Timer from "../ui/Timer";
-import PersonIcon from "@mui/icons-material/Person";
+import { SvgIcon } from "@mui/material";
+import Person from "@mui/icons-material/Person";
 
 const Header = () => {
   return (
@@ -18,8 +19,7 @@ const Header = () => {
     
       <Button title="REGISTER NOW" titleStyle="font-semibold text-sm" buttonStyle="px-6 py-2 bg-gradient-to-b from-orange-400 to-orange-600 rounded-full shadow-md hover:from-orange-500 hover:to-orange-700 active:scale-95 transition-all"/>
 
-      <PersonIcon className="w-6 h-6 text-gray-500" />
-
+      <SvgIcon component={Person} sx={{ fontSize: '24px', color: "gray", color: "gray"}}/>
     </div>
     
    </div>

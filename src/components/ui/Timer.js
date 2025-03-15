@@ -15,7 +15,7 @@ export default function Timer({ targetDate, customStyle }) {
   useEffect(() => {
     const calculateTimeLeft = () => {
       const difference = new Date(targetDate).getTime() - new Date().getTime();
-      if (difference <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+      if (difference <= 0) return { days: "00", hours: "00", minutes: "00", seconds: "00" };
 
       return {
         days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, "0"),
