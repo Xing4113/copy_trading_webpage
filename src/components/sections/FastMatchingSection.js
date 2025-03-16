@@ -1,6 +1,7 @@
 "use client"; // Runs on the client side
 
-import PhoneContainer from "../ui/PhoneContainer";
+import Image from "next/image";
+import Video from "../ui/Video";
 
 export default function FastMatchingSection() {
   return (
@@ -13,15 +14,25 @@ export default function FastMatchingSection() {
         {/* Video & Description */}
         <div className="flex justify-center mt-[36px]">
 
-            <div className="-ml-[36px] mr-[36px]">
+            <div className="relative flex items-center justify-center -ml-[36px] mr-[36px]"> 
 
-                <PhoneContainer 
-                    filePath="/videos/mobile-video.mp4" 
-                    fileType="video/mp4" 
-                    containerStyle="w-[196px] shadow-md" 
+                <Image 
+                    src="/images/mobile-1.png" 
+                    width={200} 
+                    height={500} 
+                    alt="mobile-1"
+                    style={{ width: "196px" }}
+                    className="shadow-md rounded-4xl z-0"
                 />
 
+                <Video 
+                    filePath="/videos/mobile-video.mp4" 
+                    fileType="video/mp4" 
+                    containerStyle="absolute px-[0.25px] top-[26.5px] z-10"
+                    videoStyle="rounded-md" 
+                />
             </div>
+
 
             <div className="pt-[64px]">
                 <ul className="space-y-2 text-white text-[22px]">
