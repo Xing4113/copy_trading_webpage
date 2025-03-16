@@ -2,8 +2,15 @@
 
 /* Load Font */
 @font-face {
-  font-family: "ATRotisSemiSans";
-  src: url("/fonts/ATRotisSemiSans.ttf") format("truetype"); /* Fallback */
+  font-family: "ATRotisSemiSans_ExtraBold";
+  src: url("/fonts/ATRotisSemiSans-ExtraBold.ttf") format("truetype"); /* Fallback */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ATRotisSemiSans_Light";
+  src: url("/fonts/ATRotisSemiSans-Light.ttf") format("truetype"); /* Fallback */
   font-weight: normal;
   font-style: normal;
 }
@@ -22,7 +29,8 @@
   --orange: #F37406;
 
   /* Use the same font family with different weights */
-  --default-font-family: "ATRotisSemiSans", sans-serif;
+  --rotis-extra-bold: "ATRotisSemiSans_ExtraBold", sans-serif;
+  --rotis-light: "ATRotisSemiSans_Light", sans-serif;
 }
 
 /* Apply Global Styles */
@@ -33,12 +41,10 @@ body {
 }
 
 /* Title Styles */
-.main-title, .rotis-extra-bold{
-  font-family: var(--default-font-family);
-  font-weight: 800; /* Extra Bold */
+.main-title{
+  font-family: var(--rotis-extra-bold);
 }
 
-.subtitle, .rotis-light {
-  font-family: var(--default-font-family);
-  font-weight: 300; /* Light */
+.subtitle{
+  font-family: var(--rotis-light);
 }

@@ -6,7 +6,7 @@ import Person from "@mui/icons-material/Person";
 
 const Header = () => {
   return (
-    <div className="w-full flex items-center justify-between px-[136px] rotis-light" style={{ backgroundColor: "var(--header-color)" }}>
+    <div className="w-full flex items-center justify-between px-[136px]" style={{ backgroundColor: "var(--header-color)", fontFamily: 'var(--rotis-light)' }}>
     
     {/* Left Section */}
     <Image src="/images/logo.png" width={168} height={80} alt="Logo" className="p-3" />
@@ -20,7 +20,7 @@ const Header = () => {
     
       <Button title="REGISTER NOW" titleStyle="text-xs" buttonStyle="px-4 py-2.5 bg-gradient-to-b from-orange-400 to-orange-500 rounded-full"/>
 
-      <SvgIcon component={Person} sx={{ fontSize: '24px', color: "gray", color: "gray"}}/>
+      <SvgIcon component={Person} sx={{ fontSize: '24px', color: "gray"}}/>
     </div>
     
    </div>

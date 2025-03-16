@@ -6,7 +6,7 @@ import Button from "../ui/Button";
 export default function HeroSection() {
   return (
     <section className="relative">
-      <div className="flex py-16">
+      <div className="flex pt-16">
         {/* Left: Image */}
         <div className="relative w-1/2 h-[800px] overflow-clip overflow-y-visible">
             <Image 
