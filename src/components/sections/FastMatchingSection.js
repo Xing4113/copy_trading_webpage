@@ -22,7 +22,7 @@ export default function FastMatchingSection() {
                     height={500} 
                     alt="mobile-1"
                     style={{ width: "196px" }}
-                    className="shadow-md rounded-4xl z-0"
+                    className="shadow-md rounded-[24px] z-0"
                 />
 
                 <Video 
