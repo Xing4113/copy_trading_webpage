@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 
 export default function GuideAccordion() {
   const [activeStep, setActiveStep] = useState(2);
@@ -67,8 +68,10 @@ export default function GuideAccordion() {
         style={{ borderColor: guide[activeStep - 1]?.color, backgroundColor: "var(--background)" }} 
       >
         {/* Display Step Image */}
-        <img 
-            src={guide[activeStep - 1]?.imagePath}  
+        <Image 
+            src={guide[activeStep - 1]?.imagePath}
+            width={380} 
+            height={425} 
             alt={`Step ${activeStep}`} 
             className="w-[380px] rounded-xl drop-shadow-[0px_10px_30px_rgba(0,0,0,0.4)]"
         />

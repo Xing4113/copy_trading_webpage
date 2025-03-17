@@ -44,10 +44,12 @@ export default function RegistrationSlider() {
             style={{ borderColor: "var(--orange)", minHeight: "360px"}}
           >
             {/* Image */}
-            <img
-              src={step.imagePath}
-              alt={`Step ${step.id}`}
-              className="w-full rounded-xl px-5"
+            <Image 
+                src={step.imagePath}
+                width={290} 
+                height={250} 
+                alt={`Step ${step.id}`}
+                className="w-full rounded-xl px-5"
             />
 
             {/* Step Description */}
@@ -55,9 +57,11 @@ export default function RegistrationSlider() {
 
             {/* Arrow (except last slide) */}
             {index !== 0 && (
-              <img 
+              <Image 
                 src="/images/arrow.png" 
-                alt="Next Step"
+                width={82} 
+                height={78} 
+                alt="next step"
                 className="absolute left-[-46px] top-1/2 transform -translate-y-1/2 w-[82px] h-[78px]"
                 style={{backgroundColor: "var(--background)"}}
               />

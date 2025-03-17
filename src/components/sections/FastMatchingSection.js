@@ -37,32 +37,68 @@ export default function FastMatchingSection() {
             <div className="pt-[64px]">
                 <ul className="space-y-2 text-white text-[22px]">
                     <li className="flex items-center gap-3">
-                        <img src="/images/list-icon.png" alt="icon" className="w-14 h-5 relative top-1" />
+                        <Image 
+                            src="/images/list-icon.png"
+                            width={56} 
+                            height={20} 
+                            alt="list icon"
+                            className="w-14 h-5 relative top-1"
+                        />
                         Spotlight
                     </li>
                     
                     <li className="flex items-center gap-3">
-                        <img src="/images/list-icon.png" alt="icon" className="w-14 h-5 relative top-1" />
+                        <Image 
+                            src="/images/list-icon.png"
+                            width={56} 
+                            height={20} 
+                            alt="list icon"
+                            className="w-14 h-5 relative top-1"
+                        />
                         Top Strategies 
                     </li>
                     
                     <li className="flex items-center gap-3">
-                        <img src="/images/list-icon.png" alt="icon" className="w-14 h-5 relative top-1" />
+                        <Image 
+                            src="/images/list-icon.png"
+                            width={56} 
+                            height={20} 
+                            alt="list icon"
+                            className="w-14 h-5 relative top-1"
+                        />
                         Low Drawdown
                     </li>
                     
                     <li className="flex items-center gap-3">
-                        <img src="/images/list-icon.png" alt="icon" className="w-14 h-5 relative top-1" />
+                        <Image 
+                            src="/images/list-icon.png"
+                            width={56} 
+                            height={20} 
+                            alt="list icon"
+                            className="w-14 h-5 relative top-1"
+                        />
                         Medium Drawdown
                     </li>
                     
                     <li className="flex items-center gap-3">
-                        <img src="/images/list-icon.png" alt="icon" className="w-14 h-5 relative top-1" />
+                        <Image 
+                            src="/images/list-icon.png"
+                            width={56} 
+                            height={20} 
+                            alt="list icon"
+                            className="w-14 h-5 relative top-1"
+                        />
                         High Drawdown
                     </li>
                     
                     <li className="flex items-center gap-3">
-                        <img src="/images/list-icon.png" alt="icon" className="w-14 h-5 relative top-1" />
+                        <Image 
+                            src="/images/list-icon.png"
+                            width={56} 
+                            height={20} 
+                            alt="list icon"
+                            className="w-14 h-5 relative top-1"
+                        />
                         New Strategies
                     </li>
                     
