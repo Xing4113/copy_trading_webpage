@@ -34,6 +34,7 @@ export default function RegistrationSlider() {
           768: { slidesPerView: 2.5 },
           640: { slidesPerView: 1.2 }
         }}
+        initialSlide={4} // Set Initial display
         className="w-full relative"
       >
 
