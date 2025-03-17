@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function NavigateAppSection() {
   return (
     <section>
-      <div className="w-full min-h-[980px] mt-[116px]" >
+      <div className="w-full mt-[116px]" >
         
         {/* title */}
         <h1 className="text-center text-4xl font-semibold" style={{color: 'var(--light-blue)'}}>Navigate Our App in 5 Clicks</h1>
