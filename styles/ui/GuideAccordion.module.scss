@@ -1,0 +1,122 @@
+// For responsive only
+
+@media (max-width: 1085) {
+
+    .stepButton{
+        gap: 30px;   
+    }
+
+}
+
+@media (max-width: 956) {
+
+    .stepNumber{
+        font-size: 30px;
+    }
+
+    .stepText{
+        font-size: 14px;
+    }
+
+    .stepImage{
+        width: 310px;
+    }
+}
+
+@media (max-width: 880) {
+
+    .stepNumber{
+        font-size: 25px;
+    }
+
+    .stepText{
+        font-size: 12px;
+    }
+
+    .stepImage{
+        width: 275px;
+    }
+}
+
+@media (min-width: 804) {
+
+    .imageContainer{
+        order: 3 !important;
+    }
+
+}
+
+@media (max-width: 805) {
+
+    .stepNumber{
+        font-size: 30px;
+    }
+
+    .stepText{
+        font-size: 14px;
+    }
+
+    .stepImage{
+        width: 310px;
+    }
+
+    .accordionContainer{
+        grid-template-columns: 1fr; /* Change to 1 column */
+        grid-template-rows: auto auto auto auto auto; /* 5 rows */
+    }
+
+    .stepButton{
+        width: 100%;
+        border-radius: 8px;
+        border-width: 1px;
+        z-index: 0;
+    }
+
+    .imageContainer{
+        border-radius: 8px;
+        border-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        z-index: 10;
+        margin-top: -30px;
+    }
+
+}
+
+@media (max-width: 535){
+
+    .accordionContainer{
+        padding: 0 20px ;
+    }
+
+}
+
+@media (max-width: 426){
+
+    .stepNumber{
+        font-size: 20px;
+    }
+
+    .stepText{
+        font-size: 12px;
+    }
+
+    .stepImage{
+        width: 260px;
+    }
+
+    .stepButton{
+        padding : 15px;
+    }
+
+
+}
+
+@media (max-width: 335){
+
+    .accordionContainer{
+        padding: 0 5px ;
+        row-gap: 12px;
+    }
+
+}

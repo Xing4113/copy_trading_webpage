@@ -1,3 +1,5 @@
+import styles from "@/styles/ui/GuideAccordion.module.scss";
+
 import { useState } from "react";
 import Image from "next/image";
 
@@ -32,39 +34,40 @@ export default function GuideAccordion() {
   ];
 
   return (
-    <div className="w-full flex justify-center mt-7 px-[74px]">
+    <div className={`w-full grid grid-cols-2 gap-y-6 px-[74px] mt-7 ${styles.accordionContainer}`}>
       
-      {/* Step Buttons */}
-      <div className="w-1/2 flex flex-col justify-between">
-        {guide.map((item) => ( 
+      {/* Step Buttons (Left Side) */}
+        {guide.map((item) => (
           <button 
             key={item.id}
             onClick={() => setActiveStep(item.id)}
-            className={`border rounded-lg p-4 flex items-center gap-[82px] z-10
-                ${ activeStep === item.id ? "w-[100.25%] rounded-r-none border-r-0" : "w-[98%]" }
+            className={`border rounded-lg p-4 flex items-center gap-[82px] cursor-pointer z-20 order-${item.id * 2} ${styles.stepButton}
+                ${ activeStep === item.id ? "w-[100.25%] row-span-1 rounded-r-none border-r-0" : "w-[98%]" }
               `}
             style={{ borderColor: item.color, backgroundColor: "var(--background)" }}
           >
             <span 
-              className="italic text-[40px]"
+              className={`italic text-[40px] ${styles.stepNumber}`} 
               style={{ color: item.color }} 
             >
               {item.id}
             </span>
             <p 
-                className="font-semibold"
+                className={`font-semibold ${styles.stepText}`}
                 style={{ color: activeStep === item.id ? "var(--light-blue)" : "white" }}
-            >{item.step}</p>
+            >
+              {item.step}
+            </p>
           </button>
         ))}
-      </div>
 
       {/* Dynamic Content Section */}
       <div 
-        className={`w-1/2 rounded-3xl flex justify-center items-center border py-[20px] z-0 
+        className={`row-span-4 flex justify-center items-center border rounded-3xl py-3 z-0 ${styles.imageContainer}
                     ${activeStep === 1 ? "rounded-tl-none" : ""} 
-                    ${activeStep === guide.length ? "rounded-bl-none" : ""}`
-                  }  
+                    ${activeStep === guide.length ? "rounded-bl-none" : ""}
+                    order-${activeStep * 2 + 1}
+                  `} 
         style={{ borderColor: guide[activeStep - 1]?.color, backgroundColor: "var(--background)" }} 
       >
         {/* Display Step Image */}
@@ -73,7 +76,7 @@ export default function GuideAccordion() {
             width={380} 
             height={425} 
             alt={`Step ${activeStep}`} 
-            className="w-[380px] rounded-xl drop-shadow-[0px_10px_30px_rgba(0,0,0,0.4)]"
+            className={`w-[380px] rounded-xl drop-shadow-[0px_10px_30px_rgba(0,0,0,0.4)] ${styles.stepImage}`}
         />
 
       </div>

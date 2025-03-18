@@ -1,15 +1,17 @@
 "use client"; // Runs on the client side
 
+import styles from "@/styles/section/TradeInAppSection.module.scss";
+
 import GuideAccordion from "../ui/GuideAccordion";
 import Image from "next/image";
 
 export default function TradeInAppSection() {
   return (
     <section>
-      <div className="w-full relative bg-[url('/images/bg-1.png')] bg-no-repeat bg-top bg-[length:200%] mt-[60px]" >
+      <div className={`w-full relative bg-[url('/images/bg-1.png')] bg-no-repeat bg-top bg-[length:200%] mt-[60px] ${styles.SectionContainerStyle}`} >
         
         {/* space */}
-        <div className="w-full h-[350px]"></div>
+        <div className={`w-full h-[350px] ${styles.space}`}></div>
 
         {/* title */}
         <h1 className="text-center text-4xl font-semibold" style={{color: 'var(--light-blue)'}}>Trade Like a Pro in Minutes</h1>
