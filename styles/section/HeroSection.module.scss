@@ -1,0 +1,551 @@
+.heroContainer {
+    display: grid;
+    padding-top: 4rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr; 
+
+    @media (max-width: 768) {
+      grid-template-columns: 1fr; /* Change to 1 column */
+      grid-template-rows: auto auto auto; /* 3 rows */
+
+    }
+
+    @media (max-width: 1175) {
+      padding-top: 2rem;
+    }
+
+    @media (max-width: 1060) {
+      padding-top: 1rem;
+    }
+    
+    @media (max-width: 768) {
+      padding-top: 0;
+    }
+
+    // Left: Hand Image Container
+    .handImageContainer {
+        grid-row: span 2;
+        position: relative;
+        width: 100%;
+        height: 800px;
+        overflow: clip;
+        overflow-y: visible;
+
+        @media (max-width: 1175) {
+          height: 700px;
+        }
+        
+        @media (max-width: 1100) {
+          height: 600px;
+        }
+
+        @media (max-width: 768) {
+          grid-row: unset; /* Reset row span */
+          order: 2
+        }
+
+        @media (max-width: 640) {
+          height: 500px;
+        }
+
+        @media (max-width: 430) {
+          height: 430px;
+        }
+
+        .handImage{
+            position: absolute;
+            left: -340px;
+            width: 925px;
+            max-width: none;
+
+            @media (max-width: 1175) {
+              width: 875px;
+            }
+            
+            @media (max-width: 1060) {
+              width: 800px;
+            }
+            
+            @media (max-width: 925) {
+              width: 750px;
+            }
+            
+            @media (max-width: 820) {
+              width: 730px;
+            }
+            
+            @media (max-width: 800) {
+              width: 700px;
+            }
+            
+            @media (max-width: 768) {
+              width: 830px;
+            }
+          
+            @media (max-width: 640) {
+              width: 700px;
+            }
+
+            @media (max-width: 430) {
+              width: 650px;
+            }
+
+            @media (max-width: 380) {
+              width: 625px;
+            }
+        }
+        
+    }
+
+  
+    // Right: Description Container
+    .descriptionContainer {
+      width: 100%;
+      position: relative;
+      min-height: 22rem; 
+      padding-top: 4.375rem;
+      padding-right: 5.9375rem; 
+
+      @media (max-width: 1175) {
+        min-height: 21rem;
+        padding-right: 5.3rem;
+      }
+
+      @media (max-width: 1110) {
+        padding-right: 4rem;
+      }
+
+      @media (max-width: 1060) {
+        min-height: 18rem;
+        padding-top: 4rem; 
+        
+      }
+
+      @media (max-width: 940) {
+        padding-right: 0;
+      }
+
+      @media (max-width: 800) {
+        min-height: 16rem;
+      }
+
+      @media (max-width: 768) {
+        padding-top: 3rem; 
+        order: 1
+      }
+
+      @media (max-width: 650){
+        padding-top: 2rem; 
+        min-height: 14rem;
+      }
+      
+      @media (max-width: 470) {
+        min-height: 11rem;
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: 430) {
+        padding-top: 1rem; 
+        min-height: 10rem;
+        margin-bottom: 50px;
+      }
+      
+      @media (max-width: 380) {
+        margin-bottom: 25px;
+      }
+
+      p {
+        text-align: center;
+        line-height: 3.5rem;
+
+        @media (max-width: 1175) {
+          font-size: 2.8rem;
+        }
+
+        @media (max-width: 1060) {
+          line-height: 2.7rem;
+        }
+
+        @media (max-width: 800) {
+          line-height: 2.3rem;
+        }
+
+        @media (max-width: 430) {
+          line-height: 1.8rem;
+        }
+
+        span:first-child {
+          font-size: 4rem; // 64px
+          color: var(--light-blue);
+          
+          @media (max-width: 1175) {
+            font-size: 3.5rem;
+          }
+
+          @media (max-width: 1060) {
+            font-size: 3rem;
+          }
+          
+          @media (max-width: 800) {
+            font-size: 2.7rem;
+          }
+          
+          @media (max-width: 430) {
+            font-size: 2rem;
+          }
+
+        }
+
+        span:last-child {
+          font-size: 2.875rem; // 46px
+          font-style: italic;
+          
+          @media (max-width: 1175) {
+            font-size: 2.375rem;
+          }
+          
+          @media (max-width: 1060) {
+            font-size: 1.9rem;
+          }
+
+          @media (max-width: 800) {
+            font-size: 1.6rem;
+          }
+
+          @media (max-width: 430) {
+            font-size: 1.4rem;
+          }
+
+        }
+      }
+
+      // Google Play & App Store Buttons
+      .appButtons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        
+        img {
+          border-radius: 0.25rem;
+
+          @media (max-width: 1175) {
+            width: 118px;
+          }
+          
+          @media (max-width: 1060) {
+            width: 105px;
+          }
+
+          @media (max-width: 800) {
+            width: 95px;
+          }
+          
+        }
+      }
+
+      // Regular Stamp
+      .regularImage {
+        position: absolute;
+        right: 85px;
+        bottom: 0;
+        z-index: -1;
+
+        @media (max-width: 1175) {
+          width: 155px;
+        }
+        
+        @media (max-width: 1110) {
+          right: 70px;
+        }
+        
+        @media (max-width: 1060) {
+          right: 60px;
+          width: 135px;
+        }
+
+        @media (max-width: 768) {
+          right: 160px;
+        }
+        
+        @media (max-width: 715) {
+          right: 130px;
+        }
+        
+        @media (max-width: 644) {
+          right: 105px;
+        }
+       
+        @media (max-width: 560) {
+          right: 65px;
+        }
+
+        @media (max-width: 470) {
+          right: 35px;
+        }
+        
+        @media (max-width: 470) {
+          width: 115px;
+          bottom: 25px;
+        }
+        
+        @media (max-width: 380) {
+          right: 15px
+        }
+      }
+        
+    }
+
+    // Choose & Trade Section
+    .chooseTrade {
+      padding-right: 5.9375rem; 
+
+      @media (max-width: 1175) {
+        padding-right: 5.3rem;
+      }
+
+      @media (max-width: 1110) {
+        padding-right: 4rem;
+      }
+      
+      @media (max-width: 940) {
+        padding-right: 2rem;
+        padding-left: 1rem;
+      }
+
+      @media (max-width: 768) {
+        order: 3;
+        padding-left: 250px;
+        text-align: right;
+      }
+      
+      @media (max-width: 650) {
+        padding-left: 170px;
+      }
+      
+      @media (max-width: 540) {
+        padding-left: 120px;
+        padding-right: 10px;
+      }
+      
+      @media (max-width: 470) {
+        padding-left: 70px;
+      }
+
+      @media (max-width: 380) {
+        padding-right: 5px;
+      }
+
+      @media (max-width: 345) {
+        padding-left: 55px;
+      }
+
+      @media (max-width: 320) {
+        padding-left: 45px;
+      }
+
+      p {
+        line-height: 2rem;
+        margin-bottom: 0;
+        margin-top: 0.2rem;
+
+        @media (max-width: 940) {
+          line-height: 1.6rem;
+        }
+
+        @media (max-width: 768) {
+          padding-left: 10px;
+        }
+        
+        @media (max-width: 380) {
+          line-height: 1.4rem;
+        }
+
+        span:first-child {
+          font-size: 2.125rem;
+          font-weight: 600;
+          color: var(--light-blue);
+
+          @media (max-width: 1175) {
+            font-size: 1.825rem;
+          }
+
+          @media (max-width: 940) {
+            font-size: 1.5rem;
+          }
+          
+          @media (max-width: 430) {
+            font-size: 1.3rem;
+          }
+
+          @media (max-width: 380) {
+            font-size: 1rem;
+          }
+        }
+
+        span:last-child {
+          font-size: 2.125rem;
+          font-weight: 600;
+          font-style: italic;
+          color: var(--gold);
+
+          @media (max-width: 1175) {
+            font-size: 1.825rem;
+          }
+
+          @media (max-width: 940) {
+            font-size: 1.5rem;
+          }
+
+          @media (max-width: 430) {
+            font-size: 1.3rem;
+          }
+
+          @media (max-width: 380) {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .tradeDescription {
+        font-size: 1rem; // 16px
+        font-weight: 600;
+        line-height: 1.25rem;
+
+        @media (max-width: 1175) {
+          font-size: 0.8rem;
+        }
+
+        @media (max-width: 940) {
+          font-size: 0.75rem;
+          line-height: 1.1rem;
+        }
+
+        @media (max-width: 800) {
+          font-size: 0.7rem;
+          line-height: 1.1rem;
+        }
+        
+        @media (max-width: 430) {
+          font-size: 0.5rem;
+          line-height: 0.6rem;
+        }
+
+      }
+
+      // Financial Products
+      .financialProducts {
+        display: flex;
+        gap: 0.75rem;
+        margin: 1.5625rem 0;
+      
+        @media (max-width: 940) {
+          margin: 1rem 0; 
+        }
+
+        @media (max-width: 380) {
+          gap: 0.3rem;
+        }
+        
+        span {
+          padding: 0.125rem 0.75rem;
+          border: 2px solid;
+          border-radius: 0.5rem;
+          font-weight: 600;
+
+          @media (max-width: 1175) {
+            padding: 0.1rem 0.5rem;
+          }
+
+          @media (max-width: 940) {
+            font-size: 0.85rem;
+            padding: 0.05rem 0.5rem;
+          }
+          
+          @media (max-width: 430) {
+            font-size: 0.7rem;
+          }
+          
+          @media (max-width: 380) {
+            font-size: 0.5rem;
+          }
+
+        }
+
+        span:first-child {
+          border-color: var(--gold);
+        }
+
+        span:nth-child(2) {
+          border-color: var(--orange);
+        }
+
+        span:nth-child(3) {
+          border-color: red;
+        }
+
+        span:last-child {
+          border-color: var(--light-blue);
+        }
+      }
+
+      .registerButtonContainer{
+
+        @media (max-width: 768) {
+          display: flex;
+          justify-content: right;
+        }
+
+        .registerButton {
+          font-size: 1.25rem; // 20px
+          font-weight: 600;
+          border-radius: 0.375rem;
+          box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+          padding: 0.375rem 1.5rem;
+          background-color: var(--orange);
+  
+          @media (max-width: 1175) {
+            font-size: 1rem;
+          }
+  
+          @media (max-width: 940) {
+            font-size: 0.85rem;  
+          }
+          
+          @media (max-width: 768) {
+            font-size: 0.8rem;  
+          }
+          
+          @media (max-width: 430) {
+            font-size: 0.6rem;
+            padding: 0.3rem 1rem;
+          }
+
+        }
+
+      }
+
+      .investmentWarning {
+        margin-top: 18px;
+        font-style: italic;
+
+        @media (max-width: 1175) {
+          margin-top: 14px;
+        }
+
+        @media (max-width: 940) {
+          font-size: 0.85rem;
+          margin-top: 10px;
+        }
+
+        @media (max-width: 430) {
+          font-size: 0.7rem;
+        }
+        
+        @media (max-width: 380) {
+          font-size: 0.6rem;
+        }
+      }
+    }
+
+}

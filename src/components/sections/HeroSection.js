@@ -2,87 +2,86 @@
 
 import Image from "next/image";
 import Button from "../ui/Button";
+import styles from "@/styles/section/HeroSection.module.scss";
 
 export default function HeroSection() {
   return (
-    <section className="relative">
-      <div className="flex pt-16">
-        {/* Left: Image */}
-        <div className="relative w-1/2 h-[800px] overflow-clip overflow-y-visible">
+    <section>
+      <div className={styles.heroContainer}>
+        {/* Left: Image display second in 768px max*/}
+        <div className={styles.handImageContainer}>
             <Image 
                 src="/images/hand.png" 
                 width={925} 
                 height={900} 
                 alt="Trading App"
-                style={{ width: "925px" }}
-                className="absolute left-[-340px] max-w-none"
+                className={styles.handImage}
             />
         </div>
 
-        <div className="w-1/2 h-[800px] pt-[70px] pr-[95px]">
-
-            <div className="relative min-h-[288px]">
-
-                <p className="text-center leading-14"> 
-                    <span className="text-[64px]" style={{color: "var(--light-blue)"}}>COPY TRADING</span> <br/> 
-                    <span className="text-[46px] italic">with Blackwell Invest</span>
-                </p>
-                
-                {/* google play & app store images */}
-                <div className="flex justify-center gap-4 mt-4">
-                    <Image 
-                        src="/images/google-play.jpg" 
-                        width={132} 
-                        height={64} 
-                        alt="Google Play"
-                        className="rounded-xl"
-                    />
-                    <Image 
-                        src="/images/app-store.jpg" 
-                        width={132} 
-                        height={64} 
-                        alt="App Store"
-                        className="rounded-xl z-10"
-                    />
-                </div>
-                
-                <Image 
-                    src="/images/regular.png" 
-                    width={160} 
-                    height={160} 
-                    alt="Regular"
-                    className="absolute -right-2 -bottom-0 z-0"
-                />
-
-            </div>
+        {/* Right: Description display first in 768px max*/} 
+        <div className={styles.descriptionContainer}>
             
-            {/* Choose & Trade (Ready-To-Go Strategies) */}
-            <div>
+            <p> 
+              <span>COPY TRADING</span> <br/> 
+              <span>with Blackwell Invest</span>
+            </p>
 
-                <p className="leading-8 mb-0 mt-1"> 
-                    <span className="text-[34px] font-semibold" style={{color: "var(--light-blue)"}}>Choose & Trade</span> <br/> 
-                    <span className="text-[34px] font-semibold italic" style={{color: "var(--gold)"}}>Ready-To-Go Strategiest</span>
-                </p>
-
-                <p className="text-[16px] font-semibold leading-5"> 
-                    Browse and copy hundreds of investment strategies developed by master traders! Whether you are a pro or beginner, you can now trade quicker and more confidently.
-                </p>
-                
-                {/* Financial Products */}
-                <div className="flex gap-3 my-[25px]">
-                    <span className="px-3 py-0.5 border-2 rounded-lg font-semibold" style={{borderColor: "var(--gold)"}}>Forex</span>
-                    <span className="px-3 py-0.5 border-2 rounded-lg font-semibold" style={{borderColor: "var(--orange)"}}>Precious Metals</span>
-                    <span className="px-3 py-0.5 border-2 border-red-400 rounded-lg font-semibold" >Oil</span>
-                    <span className="px-3 py-0.5 border-2 rounded-lg font-semibold" style={{borderColor: "var(--light-blue)"}}>Indices</span>
-                </div>
-                
-                <Button title="Register Now" titleStyle="text-[20px] font-semibold" buttonStyle="rounded-md shadow-md px-6 py-1.5 mb-[25px]"  otherStyle={{ backgroundColor: "var(--orange)"}} />
-
-                <p className="italic">When you invest, your capital is at risk. Be prudent.</p>
+            {/* Google Play & App Store Images */}
+            <div className={styles.appButtons}>
+              <Image 
+                src="/images/google-play.jpg" 
+                width={132} 
+                height={64} 
+                alt="Google Play"
+              />
+              <Image 
+                src="/images/app-store.jpg" 
+                width={132} 
+                height={64} 
+                alt="App Store"
+              />
             </div>
+
+            <Image 
+              src="/images/regular.png" 
+              width={160} 
+              height={160} 
+              alt="Regular"
+              className={styles.regularImage}
+            />
 
         </div>
 
+        {/* Choose & Trade Section display third 768px max*/}
+        <div className={styles.chooseTrade}>
+            <p> 
+              <span>Choose & Trade</span> <br/> 
+              <span>Ready-To-Go Strategists</span>
+            </p>
+
+            <p className={styles.tradeDescription}> 
+              Browse and copy hundreds of investment strategies developed by master traders! Whether you are a pro or beginner, you can now trade quicker and more confidently.
+            </p>
+            
+            {/* Financial Products */}
+            <div className={styles.financialProducts}>
+              <span>Forex</span>
+              <span>Precious Metals</span>
+              <span>Oil</span>
+              <span>Indices</span>
+            </div>
+
+            <div className={styles.registerButtonContainer}>
+                <Button 
+                    title="Register Now" 
+                    titleStyle={styles.registerButton}
+                />
+            </div>
+
+            <p className={styles.investmentWarning}>When you invest, your capital is at risk. Be prudent.</p>
+        </div>
+          
       </div>
     </section>
   );
