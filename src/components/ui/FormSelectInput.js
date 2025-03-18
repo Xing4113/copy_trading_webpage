@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 
-export default function FormSelectInput({ name, options = [], placeholder, containerStyle }) {
+export default function FormSelectInput({ name, options = [], placeholder, containerStyle, onChangeValue }) {
   const [selectedValue, setSelectedValue] = useState(""); // Track selected value
 
   const handleChange = (e) => {
     const value = e.target.value;
     if (value === "reset") {
       setSelectedValue(""); // Reset to placeholder
+      onChangeValue("");
     } else {
       setSelectedValue(value);
+      onChangeValue(value);
     }
   };
 

@@ -1,4 +1,4 @@
-export default function FormTextArea({ name, placeholder, containerStyle, rows = 4 }) {
+export default function FormTextArea({ name, placeholder, containerStyle, rows = 4, onChange }) {
     return (
       <div className={`relative ${containerStyle}`}>
         <textarea
@@ -6,6 +6,7 @@ export default function FormTextArea({ name, placeholder, containerStyle, rows =
           placeholder={placeholder}
           rows={rows}
           className={`w-full h-full p-4 border border-[#539CB7] rounded-md focus:outline-none placeholder-[#539CB7] text-lg resize-none`}
+          onChange={onChange}
         ></textarea>
       </div>
     );
