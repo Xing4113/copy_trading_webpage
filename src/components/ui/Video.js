@@ -6,7 +6,6 @@ export default function Video({filePath, fileType, containerStyle, videoStyle}) 
     <div className={`${containerStyle}`}>
 
       <video
-        width="300"
         className={videoStyle}
         autoPlay
         loop

@@ -2,111 +2,63 @@
 
 import Image from "next/image";
 import Video from "../ui/Video";
+import styles from "@/styles/section/FastMatchingSection.module.scss";
 
 export default function FastMatchingSection() {
   return (
     <section>
-      <div className="w-full mt-[50px]">
+      <div className={styles.fastMatchingContainer}>
         
         {/* title */}
-        <h1 className="text-center text-4xl font-semibold" style={{color: 'var(--light-blue)'}}>Fast Matching</h1>
+        <h1 className={styles.title}>Fast Matching</h1>
 
         {/* Video & Description */}
-        <div className="flex justify-center mt-[36px]">
+        <div className={styles.content}>
 
-            <div className="relative flex items-center justify-center -ml-[36px] mr-[36px]"> 
+          {/* Video Section */}
+          <div className={styles.videoContainer}> 
+            <Image 
+              src="/images/mobile-1.png" 
+              width={200} 
+              height={500} 
+              alt="mobile-1"
+              className={styles.mobileImage}
+            />
 
-                <Image 
-                    src="/images/mobile-1.png" 
-                    width={200} 
-                    height={500} 
-                    alt="mobile-1"
-                    style={{ width: "196px" }}
-                    className="shadow-md rounded-[24px] z-0"
-                />
+            <Video 
+              filePath="/videos/mobile-video.mp4" 
+              fileType="video/mp4" 
+              containerStyle={styles.video}
+              videoStyle="rounded-md" 
+            />
+          </div>
 
-                <Video 
-                    filePath="/videos/mobile-video.mp4" 
-                    fileType="video/mp4" 
-                    containerStyle="absolute px-[0.25px] top-[26.5px] z-10"
-                    videoStyle="rounded-md" 
-                />
-            </div>
-
-
-            <div className="pt-[64px]">
-                <ul className="space-y-2 text-white text-[22px]">
-                    <li className="flex items-center gap-3">
-                        <Image 
-                            src="/images/list-icon.png"
-                            width={56} 
-                            height={20} 
-                            alt="list icon"
-                            className="w-14 h-5 relative top-1"
-                        />
-                        Spotlight
-                    </li>
-                    
-                    <li className="flex items-center gap-3">
-                        <Image 
-                            src="/images/list-icon.png"
-                            width={56} 
-                            height={20} 
-                            alt="list icon"
-                            className="w-14 h-5 relative top-1"
-                        />
-                        Top Strategies 
-                    </li>
-                    
-                    <li className="flex items-center gap-3">
-                        <Image 
-                            src="/images/list-icon.png"
-                            width={56} 
-                            height={20} 
-                            alt="list icon"
-                            className="w-14 h-5 relative top-1"
-                        />
-                        Low Drawdown
-                    </li>
-                    
-                    <li className="flex items-center gap-3">
-                        <Image 
-                            src="/images/list-icon.png"
-                            width={56} 
-                            height={20} 
-                            alt="list icon"
-                            className="w-14 h-5 relative top-1"
-                        />
-                        Medium Drawdown
-                    </li>
-                    
-                    <li className="flex items-center gap-3">
-                        <Image 
-                            src="/images/list-icon.png"
-                            width={56} 
-                            height={20} 
-                            alt="list icon"
-                            className="w-14 h-5 relative top-1"
-                        />
-                        High Drawdown
-                    </li>
-                    
-                    <li className="flex items-center gap-3">
-                        <Image 
-                            src="/images/list-icon.png"
-                            width={56} 
-                            height={20} 
-                            alt="list icon"
-                            className="w-14 h-5 relative top-1"
-                        />
-                        New Strategies
-                    </li>
-                    
-                </ul>
-            </div>
+          {/* List Section */}
+          <div className={styles.listContainer}>
+            <ul>
+              {[
+                "Spotlight",
+                "Top Strategies",
+                "Low Drawdown",
+                "Medium Drawdown",
+                "High Drawdown",
+                "New Strategies"
+              ].map((item, index) => (
+                <li key={index}>
+                  <Image 
+                    src="/images/list-icon.png"
+                    width={56} 
+                    height={20} 
+                    alt="list icon"
+                    className={styles.listIcon}
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
 
         </div>
-
       </div>
     </section>
   );
