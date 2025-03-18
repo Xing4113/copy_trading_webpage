@@ -6,13 +6,13 @@ import Person from "@mui/icons-material/Person";
 
 const Header = () => {
   return (
-    <div className="w-full flex items-center justify-between px-[136px]" style={{ backgroundColor: "var(--header-color)", fontFamily: 'var(--rotis-light)' }}>
+    <div className="w-full flex items-center justify-between px-[132px] fixed top-0 z-30" style={{ backgroundColor: "var(--header-color)", fontFamily: 'var(--rotis-light)' }}>
     
     {/* Left Section */}
     <Image src="/images/logo.png" width={168} height={80} alt="Logo" className="p-3" />
     
     {/* Center Section */}
-    <Timer targetDate="2025-04-16T23:59:59" customStyle="ml-[-120px]"/>
+    <Timer targetDate="2025-04-16T23:59:59" customStyle="ml-[-128px] pt-1"/>
 
     {/* Right Section */}
 

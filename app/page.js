@@ -13,7 +13,7 @@ export default function Home() {
     <div>
       <Header />
 
-      <div className="body max-w-[1250px] shadow-lg mx-auto"> 
+      <div className="body max-w-[1520px] shadow-[0px_4px_4px_rgba(0,0,0,0.2)] mx-[132px] pt-[83px] mb-[63px]"> 
         <HeroSection />
         <FastMatchingSection />
         <EasyAnalysisSection />
