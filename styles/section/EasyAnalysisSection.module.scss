@@ -1,0 +1,156 @@
+.easyAnalysisContainer {
+    width: 100%;
+    margin-top: 60px;
+
+    // Title
+    .title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--light-blue);
+    }
+
+    // Description
+    .description {
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+        max-width: 850px;
+        margin: 28px auto 0;
+        color: var(--gold);
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 430) {
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 375) {
+            font-size: 0.8rem;
+        }
+        
+        @media (max-width: 330) {
+            font-size: 0.725rem;
+        }
+    }
+
+    // Mobile & Function Images
+    .imageContainer {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-top: 36px;
+
+        .mobileImage {
+            width: 196px;
+            box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.5);
+            border-radius: 24px;
+            position: relative;
+            z-index: 0;
+
+            @media (max-width: 430) {
+                width: 168px;
+            }
+            
+            @media (max-width: 375) {
+                width: 148px;
+            }
+
+        }
+
+        // Function images (absolute positioning)
+        .functionImage {
+            width: 196px;
+            position: absolute;
+            z-index: 10;
+
+        }
+
+        .function1 {
+            top: -22px;
+            left: -98px;
+        }
+
+        .function2 {
+            top: 68px;
+            right: -98px;
+        }
+
+        .function3 {
+            top: 138px;
+            left: -98px;
+        }
+
+        .function4 {
+            top: 188px;
+            right: -98px;
+        }
+
+        .function5 {
+            bottom: -22px;
+            left: -98px;
+        }
+
+        @media (max-width: 430) {
+            .function1 {
+                top: -19px;
+                left: -86px;
+            }
+    
+            .function2 {
+                top: 59px;
+                right: -84px;
+            }
+    
+            .function3 {
+                top: 118px;
+                left: -86px;
+            }
+    
+            .function4 {
+                top: 162px;
+                right: -84px;
+            }
+    
+            .function5 {
+                bottom: -18px;
+                left: -86px;
+            }
+        }
+        
+        @media (max-width: 375) {
+
+            .function1 {
+                top: -16px;
+                left: -79px;
+            }
+    
+            .function2 {
+                top: 45px;
+                right: -74px;
+            }
+    
+            .function3 {
+                top: 104px;
+                left: -79px;
+            }
+    
+            .function4 {
+                top: 142px;
+                right: -74px;
+            }
+    
+            .function5 {
+                bottom: -15px;
+                left: -79px;
+            }
+
+        }
+        
+        
+    }
+
+}
