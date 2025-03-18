@@ -1,0 +1,26 @@
+.body{
+    max-width: 1520px;
+    margin: 0 132px 63px;
+
+    .mainContent{
+        width: 100%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+        padding-top: 5.2rem;
+    }
+
+    @media (max-width: 1460) {
+        margin: 0 100px 50px;
+    }
+
+    @media (max-width: 1376) {
+        margin: 0 60px 30px;
+    }
+
+    @media (max-width: 1300) {
+        margin: 0 30px 15px;
+    }
+
+    @media (max-width: 1300) {
+        margin: 0;
+    }
+}

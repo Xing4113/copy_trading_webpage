@@ -1,3 +1,5 @@
+import styles from "@/styles/pages/Homepage.module.scss";
+
 import Header from "@/src/components/layout/Header";
 import HeroSection from "@/src/components/sections/HeroSection";
 import FastMatchingSection from "@/src/components/sections/FastMatchingSection";
@@ -11,18 +13,33 @@ import EnquireNowSection from "@/src/components/sections/EnquireNowSection";
 export default function Home() {
   return (
     <div>
+      
       <Header />
 
-      <div className="body max-w-[1520px] shadow-[0px_4px_4px_rgba(0,0,0,0.2)] mx-[132px] pt-[83px] mb-[63px]"> 
-        <HeroSection />
-        <FastMatchingSection />
-        <EasyAnalysisSection />
-        <TradeInAppSection />
-        <LinkAccountSection />
-        <ChooseSection />
-        <NavigateAppSection />
-        <EnquireNowSection />
+      <div className={styles.body}>
+
+        <div className={styles.mainContent}>
+
+          <HeroSection />
+          
+          <FastMatchingSection />
+          
+          <EasyAnalysisSection />
+          
+          <TradeInAppSection />
+          
+          <LinkAccountSection />
+          
+          <ChooseSection />
+          
+          <NavigateAppSection />
+          
+          <EnquireNowSection />
+      
+        </div> 
+
       </div>
+
     </div>
   );
 }
