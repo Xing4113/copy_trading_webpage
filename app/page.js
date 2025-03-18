@@ -6,6 +6,7 @@ import TradeInAppSection from "@/src/components/sections/TradeInAppSection";
 import LinkAccountSection from "@/src/components/sections/LinkAccountSection";
 import ChooseSection from "@/src/components/sections/ChooseSection";
 import NavigateAppSection from "@/src/components/sections/NavigateAppSection"; 
+import EnquireNowSection from "@/src/components/sections/EnquireNowSection";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <LinkAccountSection />
         <ChooseSection />
         <NavigateAppSection />
+        <EnquireNowSection />
       </div>
     </div>
   );
