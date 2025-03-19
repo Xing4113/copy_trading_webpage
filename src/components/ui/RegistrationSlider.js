@@ -1,3 +1,5 @@
+import styles from "@/styles/ui/RegistrationSlider.module.scss";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -18,7 +20,7 @@ export default function RegistrationSlider() {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center py-6 px-[76px] relative">
+    <div className={`w-full mx-auto flex flex-col items-center py-6 px-[76px] relative ${styles.registerSliderContainer}`}>
 
       {/* Swiper Slider */}
       <Swiper
@@ -32,7 +34,8 @@ export default function RegistrationSlider() {
         breakpoints={{
           1024: { slidesPerView: 3.5 },
           768: { slidesPerView: 2.5 },
-          640: { slidesPerView: 1.2 }
+          540: { slidesPerView: 1.5 },
+          0: { slidesPerView: 1 }
         }}
         initialSlide={4} // Set Initial display
         className="w-full relative"
@@ -41,7 +44,7 @@ export default function RegistrationSlider() {
         {/* Custom Prev Button */}
             
         {guide.map((step, index) => (
-          <SwiperSlide key={step.id} className="flex flex-col items-center border rounded-3xl py-5 relative"
+          <SwiperSlide key={step.id} className={`flex flex-col items-center border rounded-3xl py-5 relative ${styles.sliderContainer}`}
             style={{ borderColor: "var(--orange)", minHeight: "360px"}}
           >
             {/* Image */}
@@ -54,7 +57,7 @@ export default function RegistrationSlider() {
             />
 
             {/* Step Description */}
-            <p className="font-semibold text-center px-6 leading-[20px]">{step.step}</p>
+            <p className={`font-semibold text-center px-6 leading-[20px] ${styles.stepText}`}>{step.step}</p>
 
             {/* Arrow (except last slide) */}
             {index !== 0 && (
@@ -63,15 +66,17 @@ export default function RegistrationSlider() {
                 width={82} 
                 height={78} 
                 alt="next step"
-                className="absolute left-[-46px] top-1/2 transform -translate-y-1/2 w-[82px] h-[78px]"
+                className={`absolute left-[-46px] top-1/2 transform -translate-y-1/2 w-[82px] h-[78px] ${styles.nextStepImage}`}
                 style={{backgroundColor: "var(--background)"}}
               />
             )}
           </SwiperSlide>
           
         ))}
+        
+      </Swiper>
 
-        <button className="swiper-button-prev-custom absolute left-[20px] w-6 h-6 rounded-full top-1/2 transform -translate-y-1/2 z-50 opacity-50 cursor-pointer hover:opacity-100">
+      <button className={`swiper-button-prev-custom absolute left-[94px] w-6 h-6 rounded-full top-1/2 transform -translate-y-1/2 z-50 opacity-50 cursor-pointer hover:opacity-100 ${styles.preIcon}`}>
             <Image 
                 src="/images/back.png" 
                 width={32} 
@@ -83,7 +88,7 @@ export default function RegistrationSlider() {
       
 
         {/* Custom Next Button */}
-        <button className="swiper-button-next-custom absolute right-[25px] w-6 h-6 rounded-full top-1/2 transform -translate-y-1/2 z-50 opacity-50 cursor-pointer hover:opacity-100">
+        <button className={`swiper-button-next-custom absolute right-[94px] w-6 h-6 rounded-full top-1/2 transform -translate-y-1/2 z-50 opacity-50 cursor-pointer hover:opacity-100 ${styles.nextIcon}`}>
             <Image 
                 src="/images/next.png" 
                 width={32} 
@@ -92,8 +97,6 @@ export default function RegistrationSlider() {
                 className="w-6 h-6"
             />
         </button>
-        
-      </Swiper>
 
     </div>
   );
