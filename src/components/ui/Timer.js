@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-export default function Timer({ targetDate, customStyle }) {
+export default function Timer({ targetDate, containerStyle, timerStyle, timeContainerStyle, labelStyle, separatorStyle }) {
   const [timeLeft, setTimeLeft] = useState(
     {
       days: String('0').padStart(2, "0"),
@@ -35,7 +35,7 @@ export default function Timer({ targetDate, customStyle }) {
   }, [targetDate]);
 
   return (
-    <div className={`pt-1 pb-1 flex items-center justify-between min-w-[496px] ${customStyle}`}>
+    <div className={`pt-1 pb-1 flex items-center gap-30 min-w-[496px] ${containerStyle}`}>
       
       <p className="text-sm text-center leading-tight uppercase">
         PROMOTION <br /> ENDS IN
@@ -43,44 +43,44 @@ export default function Timer({ targetDate, customStyle }) {
 
       <div className="flex space-x-2 mt-2">
         
-        <div className="flex flex-col items-center min-w-[64px] gap-1.5">
-          <span className="text-4xl">
+        <div className={`flex flex-col items-center min-w-[64px] gap-1.5 ${timeContainerStyle}`}>
+          <span className={`text-4xl ${timerStyle}`}>
             {timeLeft.days}
           </span>
-          <span className="text-xs">Days</span>
+          <span className={`text-xs ${labelStyle}`}>Days</span>
         </div>
 
         <div className="flex items-start">
-          <span className="text-3xl pt-0.5">:</span>
+          <span className={`text-3xl pt-0.5 ${separatorStyle}`}>:</span>
         </div>
 
-        <div className="flex flex-col items-center min-w-[64px] gap-1.5">
-          <span className="text-4xl">
+        <div className={`flex flex-col items-center min-w-[64px] gap-1.5 ${timeContainerStyle}`}>
+          <span className={`text-4xl ${timerStyle}`}>
             {timeLeft.hours}
           </span>
-          <span className="text-xs">Hours</span>
+          <span className={`text-xs ${labelStyle}`}>Hours</span>
         </div>
 
         <div className="flex items-start">
-          <span className="text-3xl pt-0.5">:</span>
+          <span className={`text-3xl pt-0.5 ${separatorStyle}`}>:</span>
         </div>
 
-        <div className="flex flex-col items-center min-w-[64px] gap-1.5">
-          <span className="text-4xl">
+        <div className={`flex flex-col items-center min-w-[64px] gap-1.5 ${timeContainerStyle}`}>
+          <span className={`text-4xl ${timerStyle}`}>
             {timeLeft.minutes}
           </span>
-          <span className="text-xs">Minutes</span>
+          <span className={`text-xs ${labelStyle}`}>Minutes</span>
         </div>
 
         <div className="flex items-start">
-          <span className="text-3xl pt-0.5">:</span>
+          <span className={`text-3xl pt-0.5 ${separatorStyle}`}>:</span>
         </div>
 
-        <div className="flex flex-col items-center min-w-[64px] gap-1.5">
-          <span className="text-4xl">
+        <div className={`flex flex-col items-center min-w-[64px] gap-1.5 ${timeContainerStyle}`}>
+          <span className={`text-4xl ${timerStyle}`}>
             {timeLeft.seconds}
           </span>
-          <span className="text-xs">Seconds</span>
+          <span className={`text-xs ${labelStyle}`}>Seconds</span>
         </div>
           
       </div>

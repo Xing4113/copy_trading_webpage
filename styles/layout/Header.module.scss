@@ -1,0 +1,193 @@
+// for responsive only
+
+@media (max-width: 1460) {
+    .headerContainer{
+    
+        padding: 0 100px;
+        
+        .timerContainer{
+            gap: 100px
+        }
+    }
+}
+
+@media (max-width: 1376) {
+    .headerContainer{
+    
+        padding: 0 60px;
+        
+        .timerContainer{
+            gap: 80px
+        }
+    }
+}
+
+@media (max-width: 1300) {
+    .headerContainer{
+    
+        padding: 0;
+        
+        .timerContainer{
+            gap: 50px
+        }
+    }
+}
+
+@media (max-width: 980) {
+    .headerContainer{
+    
+        .timerContainer{
+            justify-content: center;
+        }
+    }
+}
+
+
+@media (max-width: 810) {
+    .headerContainer{
+    
+        .timerContainer{
+
+            gap: 20px;
+            min-width: 350px;
+
+            p{
+                font-size: 12px;
+            }
+
+            .timer{
+                font-size: 26px;
+            }
+
+            .timeContainer{
+                margin: 0;
+            }
+
+            .label{
+                font-size: 10px;
+            }
+
+            .separator{
+                font-size: 20px;
+            }
+
+        } 
+
+    }
+
+}
+
+@media (max-width: 768) {
+    .logoImage{
+        width: 135px;
+    }
+
+    .headerContainer{
+    
+        .registerContainer{
+            display: none;
+        }
+
+        .menuContainer{
+            display: block;
+        }
+        
+
+    }
+
+}
+
+@media (max-width: 610) {
+    .headerContainer{
+    
+        .logoImage{
+            width: 125px;
+        }
+
+        .timerContainer{
+
+            gap: 5px;
+            min-width: 300px;
+
+            p{
+                font-size: 11px;
+            }
+
+            .timer{
+                font-size: 24px;
+            }
+
+            .timeContainer{
+                min-width: 50px;
+            }
+
+            .label{
+                font-size: 9px;
+            }
+
+            .separator{
+                font-size: 18px;
+            }
+
+        } 
+
+    }
+
+}
+
+@media (max-width: 610) {
+    .headerContainer{
+
+        .logoImage{
+            width: 115px;
+        }
+
+        .timerContainer{
+
+            gap: 10px;
+
+            p{
+                font-size: 10px;
+            }
+
+            .timer{
+                font-size: 20px;
+            }
+
+            .timeContainer{
+                min-width: 40px;
+            }
+
+            .label{
+                font-size: 8px;
+            }
+
+            .separator{
+                font-size: 15px;
+            }
+
+        } 
+
+        .menuIcon{
+            font-size: 20px;
+        }
+    }
+
+}
+
+@media (max-width: 460) {
+    .headerContainer{
+
+        .logoImage{
+            width: 105px;
+        }
+
+        .timerContainer{
+
+            display: none;
+
+        } 
+
+    }
+
+}
