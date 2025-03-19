@@ -1,15 +1,17 @@
 "use client"; // Runs on the client side
 
+import styles from "@/styles/section/ChooseSection.module.scss";
+
 import FeatureList from "../ui/FeatureList";
 import Button from "../ui/Button";
 
 export default function ChooseSection() {
   return (
     <section>
-      <div className="w-full bg-[url('/images/bg-2.png')] bg-no-repeat bg-top bg-[length:195%] mt-[60px]" >
+      <div className={`w-full bg-[url('/images/bg-2.png')] bg-no-repeat bg-top bg-[length:195%] mt-[60px] ${styles.featureContainer}`} >
         
         {/* space */}
-        <div className="w-full h-[296px]"></div>
+        <div className={`w-full h-[296px] ${styles.space}`}></div>
 
         {/* title */}
         <h1 className="text-center text-4xl font-semibold" style={{color: 'var(--light-blue)'}}>Why Choose Us?</h1>

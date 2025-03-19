@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import styles from "@/styles/ui/FeatureList.module.scss";
+
 export default function FeatureList() {
     const features = [
       {
@@ -33,25 +35,26 @@ export default function FeatureList() {
     ];
   
     return (
-      <div className="w-full flex flex-col gap-4 px-[74px] mt-6">
+      <div className={`w-full flex flex-col gap-4 px-[74px] mt-6 ${styles.featureContainer}`}>
         {features.map((feature) => (
           <div 
             key={feature.id} 
-            className="flex items-center bg-white rounded-xl"
+            className={`flex items-center bg-white rounded-xl ${styles.featureListContainer}`}
           >
-            {/* Icon */}
-            <div className="pl-5 w-[180px]">
-              <Image src={feature.icon} width={36} height={36} alt={feature.title} className={`${feature.iconSize}`} />
+            {/* Icon & Title*/}
+            <div className={`pl-5 flex justify-center items-center ${styles.firstContainer}`}>
+              
+              <div className={`w-[180px] ${styles.iconContainer}`}>
+                <Image src={feature.icon} width={36} height={36} alt={feature.title} className={`${feature.iconSize} ${styles.icons}`} />
+              </div>
+
+              <h3 className={`text-lg font-bold text-blue-800 whitespace-nowrap w-[160px] ${styles.title}`}>{feature.title}</h3>
+
             </div>
   
-            {/* Title */}
-            <div className="ml-1 w-[160px]">
-              <h3 className="text-lg font-bold text-blue-800 whitespace-nowrap">{feature.title}</h3>
-            </div>
-
-            {/* Description */}
-            <div className="ml-6 flex-1 pr-3">
-              <p className="text-md text-black font-medium">{feature.description}</p>
+            {/* description */}
+            <div className={`flex-1 flex justify-center items-center ${styles.descriptionContainer}`}>
+              <p className={`text-md text-black font-medium flex-1 ${styles.description}`}>{feature.description}</p>
             </div>
             
           </div>
