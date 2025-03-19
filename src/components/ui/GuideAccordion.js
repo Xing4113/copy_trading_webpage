@@ -41,10 +41,10 @@ export default function GuideAccordion() {
           <button 
             key={item.id}
             onClick={() => setActiveStep(item.id)}
-            className={`border rounded-lg p-4 flex items-center gap-[82px] cursor-pointer z-20 order-${item.id * 2} ${styles.stepButton}
+            className={`border rounded-lg p-4 flex items-center gap-[82px] cursor-pointer z-20 ${styles.stepButton}
                 ${ activeStep === item.id ? "w-[100.25%] row-span-1 rounded-r-none border-r-0" : "w-[98%]" }
               `}
-            style={{ borderColor: item.color, backgroundColor: "var(--background)" }}
+            style={{ borderColor: item.color, backgroundColor: "var(--background)", order: item.id }}
           >
             <span 
               className={`italic text-[40px] ${styles.stepNumber}`} 
@@ -66,9 +66,8 @@ export default function GuideAccordion() {
         className={`row-span-4 flex justify-center items-center border rounded-3xl py-3 z-0 ${styles.imageContainer}
                     ${activeStep === 1 ? "rounded-tl-none" : ""} 
                     ${activeStep === guide.length ? "rounded-bl-none" : ""}
-                    order-${activeStep * 2 + 1}
                   `} 
-        style={{ borderColor: guide[activeStep - 1]?.color, backgroundColor: "var(--background)" }} 
+        style={{ borderColor: guide[activeStep - 1]?.color, backgroundColor: "var(--background)", order: activeStep }} 
       >
         {/* Display Step Image */}
         <Image 
